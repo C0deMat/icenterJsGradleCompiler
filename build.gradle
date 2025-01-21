@@ -2,7 +2,7 @@ plugins {
     id 'com.gradle.plugin-publish' version '0.11.0'
     id 'java'
     id 'java-gradle-plugin'
-    id 'maven'
+    id 'maven-publish'
 }
 
 group 'com.C0deMat.gradle'
@@ -27,15 +27,22 @@ gradlePlugin {
 dependencies {
     compileOnly gradleApi()
     implementation("com.google.auto.value:auto-value-annotations:1.7")
-    compile('com.google.javascript:closure-compiler:v20200406') {
+    implementation('com.google.javascript:closure-compiler:v20200406') {
         exclude module: 'junit'
     }
 }
 
-uploadArchives {
+publishing {
+    publications {
+        myLibrary(MavenPublication) {
+            from components.java
+        }
+    }
+
     repositories {
-        mavenDeployer {
-            repository(url: uri('./repo'))
+        maven {
+            name = 'jsjavacompiler'
+            url = uri('./repo')
         }
     }
 }
