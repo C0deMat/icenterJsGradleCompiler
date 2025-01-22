@@ -14,7 +14,7 @@ A simple Js compiler for gradle (tested only on Gradle 6.0+, but it should work 
 Place one of these code snippets in build.gradle: 
 ```groovy
 plugins {
-  id "com.C0deMat.gradle.icenterjsgradlecompiler" version "0.4.0"
+  id "io.github.C0deMat.icenterjsgradlecompiler" version "0.4.0"
 }
 ```
 
@@ -27,11 +27,11 @@ buildscript {
     }
   }
   dependencies {
-    classpath "gradle.plugin.com.C0deMat.gradle:icenterjsgradlecompiler:0.4.0"
+    classpath "gradle.plugin.io.github.C0deMat:icenterjsgradlecompiler:0.4.0"
   }
 }
 
-apply plugin: "com.C0deMat.gradle.icenterjsgradlecompiler"
+apply plugin: "io.github.C0deMat.icenterjsgradlecompiler"
 ```
 
 

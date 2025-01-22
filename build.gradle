@@ -5,7 +5,7 @@ plugins {
     id 'maven-publish'
 }
 
-group 'com.C0deMat.gradle'
+group 'io.github.C0deMat'
 version '0.4.0'
 
 sourceCompatibility = 1.8
@@ -18,7 +18,7 @@ repositories {
 gradlePlugin {
     plugins {
         jsGradleCompiler {
-            id = 'com.C0deMat.gradle.icenterjsgradlecompiler'
+            id = 'io.github.C0deMat.icenterjsgradlecompiler'
             implementationClass = 'com.leobia.gradle.JsCompilerPlugin'
         }
     }
